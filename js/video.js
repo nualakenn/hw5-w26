@@ -14,6 +14,10 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+
+	//update volume
+	document.querySelector("#volume").textContent = Math.round(video.volume * 100) + "%";
+	video.play();
 });
 
 
