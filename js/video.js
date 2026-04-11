@@ -114,16 +114,3 @@ document.querySelector("#slider").addEventListener("input", function() {
 });
 
 
-//Old School
-document.querySelector("#vintage").addEventListener("click", function() {
-	video.classList.add("oldSchool");
-	console.log("Old School style applied");
-});
-
-// original style
-document.querySelector("#orig").addEventListener("click", function() {
-	video.classList.remove("oldSchool");
-	console.log("Original style restored");
-
-});
-
