@@ -29,7 +29,6 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 
-
 // slow down   //used chat GPT for help
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Video Down");
@@ -111,6 +110,20 @@ document.querySelector("#slider").addEventListener("input", function() {
 
 	// log volume
 	console.log("Volume:", video.volume);
+});
+
+
+//Old School
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+	console.log("Old School style applied");
+});
+
+// original style
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+	console.log("Original style restored");
+
 });
 
 
