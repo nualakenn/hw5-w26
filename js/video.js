@@ -57,7 +57,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 
 
-// skip ahead NEEDS WORK!!!!
+// skip ahead  //used chat GPT for help with the if statement
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log("skip ahead 10s");
 
@@ -71,7 +71,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = newTime;
 	}
 
-	// log current position
+	// log position
 	console.log("Current time:", video.currentTime);
 });
 
@@ -90,8 +90,40 @@ document.querySelector("#mute").addEventListener("click", function() {
 		this.textContent = "Mute";
 	}
 
-	// optional: log state
+	// log state
 	console.log("Muted:", video.muted);
 });
 
+
+// Volume Slider
+document.querySelector("#slider").addEventListener("input", function() {
+	console.log("Volume slider changed");
+
+	// convert slider value (0–100) to volume (0–1)
+	video.volume = this.value / 100;
+
+	// if volume is changed, unmute video
+	video.muted = false;
+	document.querySelector("#mute").textContent = "Mute";
+
+	// update volume display
+	document.querySelector("#volume").textContent = this.value + "%";
+
+	// log volume
+	console.log("Volume:", video.volume);
+});
+
+
+//Old School
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+	console.log("Old School style applied");
+});
+
+// original style
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+	console.log("Original style restored");
+
+});
 
